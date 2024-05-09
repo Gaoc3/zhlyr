@@ -26,4 +26,5 @@ pip install zhlyr
 
 
 
-<span style="color: blue;">نص أزرق اللون</span>
+<span style="color: red;">نص أحمر اللون</span>
+

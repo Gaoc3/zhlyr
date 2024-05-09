@@ -26,5 +26,5 @@ pip install zhlyr
 - [Telegram](https://web.telegram.org/) [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20">](https://web.telegram.org/)
 
 
-<span style="color: red;">نص أحمر اللون</span>
+<span style="color: red;">بحب طيز السيسي</span>
 

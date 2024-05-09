@@ -1,34 +1,4 @@
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Markdown to HTML Converter</title>
-<script src="https://cdn.jsdelivr.net/npm/remarkable/dist/remarkable.min.js"></script>
-</head>
-<body>
-
-<h2>أدخل النص Markdown:</h2>
-<textarea id="markdown-input" rows="10" cols="50"># عنوان
-هذا نص **Markdown** يمكن تحويله إلى HTML.
-</textarea>
-<br>
-<button onclick="convertMarkdown()">تحويل إلى HTML</button>
-
-<h2>النص المحول إلى HTML:</h2>
-<div id="html-output"></div>
-
-<script>
-function convertMarkdown() {
-    var markdownInput = document.getElementById('markdown-input').value;
-    var md = new Remarkable();
-    var htmlOutput = md.render(markdownInput);
-    document.getElementById('html-output').innerHTML = htmlOutput;
-}
-</script>
-
-</body>
-</html>
 
 
 ## Code Area :

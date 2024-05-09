@@ -7,7 +7,7 @@ locale: "ar"
 # الروابط والمسارات
 url: "https://example.com"
 baseurl: "/repository-name"
-
+  title: hello
 # وظائف خاصة
 comments: true
 search: true

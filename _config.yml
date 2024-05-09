@@ -4,12 +4,8 @@ markdown: kramdown
 title: zhlyr
 description: library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
 favicon: "favicon.png"
-plugins:
-  - jekyll-markdown-pages
 
 url: https://github.com/Gaoc3
-baseurl: /zhlyr
-
 languages: [ar, en]
 
 fonts:

@@ -1,41 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zhlyr</title>
-  <meta name="description" content="{{ site.description }}">
-  <link rel="icon" href="{{ site.favicon }}">
+  <title>My Website</title>
 </head>
 <body>
-  <header>
-    <h1 id="title"></h1>
-    <p id="description"></p>
-  </header>
+  <h1>Welcome to my website!</h1>
 
-  <nav>
-    <ul id="languages"></ul>
-  </nav>
-
-  <script>
-    // قراءة محتوى ملف YAML
-    fetch('_config.yml')
-      .then(response => response.text())
-      .then(yamlContent => {
-        // تحويل المحتوى إلى كائن JavaScript
-        const data = YAML.parse(yamlContent);
-        
-        // استخدام البيانات في الصفحة
-        document.getElementById('title').textContent = data.title;
-        document.getElementById('description').textContent = data.description;
-        
-        const languagesList = document.getElementById('languages');
-        data.languages.forEach(lang => {
-          const listItem = document.createElement('li');
-          listItem.innerHTML = `<a href="${data.baseurl}/${lang}">${lang}</a>`;
-          languagesList.appendChild(listItem);
-        });
-      });
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
+html>

@@ -20,21 +20,10 @@
 - Large Font Size: "18px"
 
 ## Social Media Links and Top-Left GitHub Link
-- GitHub:
-  - Icon: "![GitHub](https://cdn-icons-png.flaticon.com/512/25/25231.png)"
-  - Link: "[GitHub](https://github.com/)"
-  - Position: "top-left"
-  - Size: "small"
-- Instagram:
-  - Icon: "![Instagram](https://cdn-icons-png.flaticon.com/512/2111/2111463.png)"
-  - Link: "[Instagram](https://www.instagram.com/)"
-  - Position: "top-right"
-  - Size: "small"
-- Telegram:
-  - Icon: "![Telegram](https://cdn-icons-png.flaticon.com/512/2111/2111646.png)"
-  - Link: "[Telegram](https://web.telegram.org/)"
-  - Position: "top-right"
-  - Size: "small"
+- [GitHub](https://github.com/) <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="24px">
+- [Instagram](https://www.instagram.com/) <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24px">
+- [Telegram](https://web.telegram.org/) <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="24px">
+
 
 ## Custom Code Area
 - Code Area: "This is where you can write your code examples."

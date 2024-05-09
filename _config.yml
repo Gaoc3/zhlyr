@@ -1,4 +1,35 @@
 theme: jekyll-theme-hacker
+# معلومات الموقع
 title: "عنوان الموقع"
 description: "وصف الموقع"
 locale: "ar"
+
+# الروابط والمسارات
+url: "https://example.com"
+baseurl: "/repository-name"
+
+# وظائف خاصة
+comments: true
+search: true
+
+# معلومات الاتصال
+email: "example@example.com"
+company_address: "123 Main Street, City, Country"
+
+# معلومات المؤلف
+author:
+  name: "اسم المؤلف"
+  bio: "نبذة عن المؤلف"
+
+# تكوينات إضافية
+social_media:
+  twitter: "username"
+  facebook: "username"
+  instagram: "username"
+
+# إعدادات أخرى
+timezone: "Asia/Riyadh"
+future: true
+highlighter: rouge
+markdown: kramdown
+permalink: /:categories/:title.html

@@ -2,9 +2,8 @@
 theme: jekyll-theme-hacker
 # Site Information
 title: zhlyr
-description: """
-A library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
-"""
+description: \nA library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
+
 
 url: https://github.com/Gaoc3
 baseurl: /zhlyr

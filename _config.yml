@@ -3,7 +3,11 @@ theme: jekyll-theme-hacker
 title: "عنوان الموقع"
 description: "وصف الموقع"
 locale: "ar"
-
+pages:
+  about:
+    title: "من نحن"
+    permalink: "/about"
+    
 # الروابط والمسارات
 url: "https://example.com"
 baseurl: "/repository-name"

@@ -1,18 +1,4 @@
 theme: jekyll-theme-hacker
-# Site Information
-markdown: kramdown
-title: zhlyr
-description: library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
-favicon: "favicon.png"
-
-url: https://github.com/Gaoc3
-languages: [ar, en]
-
-fonts:
-  regular: "16px"
-  large: "18px"
-
-
 
 
 

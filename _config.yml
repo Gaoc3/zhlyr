@@ -1,39 +1,60 @@
+# _config.yml
+
+# Site Information
+title: "zhlyr"
+description: "A library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet."
+locale: "en"
+
+# Theme
 theme: jekyll-theme-hacker
-# معلومات الموقع
-title: "عنوان الموقع"
-description: "وصف الموقع"
-locale: "ar"
-pages:
-  about:
-    title: "من نحن"
-    permalink: "/about"
-    
-# الروابط والمسارات
-url: "https://example.com"
-baseurl: "/repository-name"
-  title: hello
-# وظائف خاصة
-comments: true
-search: true
 
-# معلومات الاتصال
-email: "example@example.com"
-company_address: "123 Main Street, City, Country"
+# URLs and Paths
+url: "https://github.com/"
+baseurl: "/zhlyr"
 
-# معلومات المؤلف
-author:
-  name: "اسم المؤلف"
-  bio: "نبذة عن المؤلف"
+# Languages
+languages: ["ar", "en"]
 
-# تكوينات إضافية
-social_media:
-  twitter: "username"
-  facebook: "username"
-  instagram: "username"
+# Fonts Configuration
+fonts:
+  regular: "16px"
+  large: "18px"
 
-# إعدادات أخرى
-timezone: "Asia/Riyadh"
-future: true
-highlighter: rouge
-markdown: kramdown
-permalink: /:categories/:title.html
+# Social Media Links and Top-Left GitHub Link
+social:
+  github:
+    icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+    link: "https://github.com/"
+    position: "top-left"
+    size: "small"
+  instagram:
+    icon: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+    link: "https://www.instagram.com/"
+    position: "top-right"
+    size: "small"
+  telegram:
+    icon: "https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+    link: "https://web.telegram.org/"
+    position: "top-right"
+    size: "small"
+
+# Custom Code Area
+code_area: "This is where you can write your code examples."
+
+# Website Description
+site_description: >
+  A platform aimed at music enthusiasts, providing tools for managing and discovering music, fetching song lyrics, and utilizing machine learning algorithms to predict the name of a song from a short audio snippet. Dive into a world where music meets technology, explore our features, and embark on a journey of musical discovery like never before.
+
+# Layout Configuration
+layout:
+  header:
+    - social: "github"
+      size: "small"
+      position: "top-left"
+    - social: "instagram"
+      size: "small"
+      position: "top-right"
+    - social: "telegram"
+      size: "small"
+      position: "top-right"
+

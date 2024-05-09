@@ -6,8 +6,9 @@
 
 
 ## Code Area :
-- install zhlyr : ```bash
-- pip install zhlyr
+- install zhlyr : 
+```bash
+ pip install zhlyr
 ```
 
 ## what is zhlyr?

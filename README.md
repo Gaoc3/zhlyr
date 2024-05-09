@@ -20,10 +20,9 @@
 - Large Font Size: "18px"
 
 ## Social Media Links and Top-Left GitHub Link
-- [GitHub](https://github.com/){:height="32px" width="32px"} ![GitHub](https://cdn-icons-png.flaticon.com/512/25/25231.png){:height="32px" width="32px"}
-- [Instagram](https://www.instagram.com/){:height="32px" width="32px"} ![Instagram](https://cdn-icons-png.flaticon.com/512/2111/2111463.png){:height="32px" width="32px"}
-- [Telegram](https://web.telegram.org/){:height="32px" width="32px"} ![Telegram](https://cdn-icons-png.flaticon.com/512/2111/2111646.png){:height="32px" width="32px"}
-
+- [<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">](https://github.com/)
+- [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20">](https://www.instagram.com/)
+- [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20">](https://web.telegram.org/)
 
 
 ## Custom Code Area

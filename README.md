@@ -1,20 +1,8 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-</head>
-<body>
-    <header>
+<header>
         <img src="https://ibb.co/x2LmP7d" alt="شعار الموقع">
         <h1>اسم الموقع</h1>
-    </header>
-    <main>
-        <!-- هنا يمكنك إضافة محتوى الموقع -->
-    </main>
-    <footer>
-        <!-- هنا يمكنك إضافة قسم الفوتر -->
-    </footer>
-</body>
+</header>
+
 
 
 

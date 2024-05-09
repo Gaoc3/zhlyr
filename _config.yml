@@ -1,0 +1,8 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: zhlyr
+description: Python library for working with images
+github:
+  api_url: https://mtskyhazoki.pythonanywhere.com/lyrics/GetLyrics?q=save your tears&srt=true
+  apiV2_url: https://mtskyhazoki.pythonanywhere.com/lyrics/GetLyrPrecisily?t=Ountha&a=siilawy&d=3:27

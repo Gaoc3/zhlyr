@@ -7,7 +7,7 @@ markdown: kramdown
 permalink: :slug
 source: /
 title: zhlyr
-description: \nA library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
+description: library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
 favicon: "favicon.png"
 plugins:
   - jekyll-markdown-pages

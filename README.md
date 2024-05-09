@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 ## Code Area :
 - **Install zhlyr:**

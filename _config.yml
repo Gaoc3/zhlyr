@@ -1,12 +1,9 @@
 # _config.yml
-
+theme: jekyll-theme-hacker
 # Site Information
 title: "zhlyr"
 description: "A library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet."
 locale: "en"
-
-# Theme
-theme: jekyll-theme-hacker
 
 # URLs and Paths
 url: "https://github.com/"

@@ -6,7 +6,9 @@
 
 
 ## Code Area :
-- Code Area: "This is where you can write your code examples."
+- install zhlyr : ```bash
+- pip install zhlyr
+```
 
 ## what is zhlyr?
   - A platform aimed at music enthusiasts, providing tools for managing and discovering music, fetching song lyrics, and utilizing machine learning algorithms to predict the name of a song from a short audio snippet. Dive into a world where music meets technology, explore our features, and embark on a journey of musical discovery like never before.

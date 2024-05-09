@@ -2,4 +2,3 @@ theme: jekyll-theme-hacker
 title: "عنوان الموقع"
 description: "وصف الموقع"
 locale: "ar"
-theme: jekyll-theme-slate

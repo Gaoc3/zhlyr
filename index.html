@@ -3,23 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
+  <title>Zhlyr</title>
   <meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
-  <link rel="icon" href="{{ site.baseurl }}/{{ site.favicon }}">
+  <link rel="icon" href="{{ site.favicon }}">
 </head>
 <body>
   <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
+    <h1 id="title"></h1>
+    <p id="description"></p>
   </header>
 
   <nav>
-    <ul>
-      {% for lang in site.languages %}
-      <li><a href="{{ site.baseurl }}/{{ lang }}">{{ lang }}</a></li>
-      {% endfor %}
-    </ul>
+    <ul id="languages"></ul>
   </nav>
 
   <main>
@@ -29,5 +24,26 @@
   <footer>
     <p>&copy; {{ site.title }} - {{ site.url | date: "%Y" }}</p>
   </footer>
+
+  <script>
+    // قراءة محتوى ملف YAML
+    fetch('_config.yml')
+      .then(response => response.text())
+      .then(yamlContent => {
+        // تحويل المحتوى إلى كائن JavaScript
+        const data = YAML.parse(yamlContent);
+        
+        // استخدام البيانات في الصفحة
+        document.getElementById('title').textContent = data.title;
+        document.getElementById('description').textContent = data.description;
+        
+        const languagesList = document.getElementById('languages');
+        data.languages.forEach(lang => {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = `<a href="${data.baseurl}/${lang}">${lang}</a>`;
+          languagesList.appendChild(listItem);
+        });
+      });
+  </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
-# _config.yml
 theme: jekyll-theme-hacker
 # Site Information
 title: zhlyr
 description: \nA library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
 favicon: "/favicon.png"
+markdown: kramdown
 
 url: https://github.com/Gaoc3
 baseurl: /zhlyr

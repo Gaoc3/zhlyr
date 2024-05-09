@@ -1,6 +1,6 @@
 source:
   path: .
-theme: jekyll-theme-jekyll
+theme: jekyll-theme-hacker
 
 # Site Information
 markdown: kramdown

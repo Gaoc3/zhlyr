@@ -1,7 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hi</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  <link rel="icon" href="{{ site.baseurl }}/{{ site.favicon }}">
 </head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </header>
 
+  <nav>
+    <ul>
+      {% for lang in site.languages %}
+      <li><a href="{{ site.baseurl }}/{{ lang }}">{{ lang }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Your main content here -->
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.title }} - {{ site.url | date: "%Y" }}</p>
+  </footer>
+</body>
+</html>

@@ -4,5 +4,5 @@ plugins:
 title: zhlyr
 description: Python library for working with images
 github:
-  api_url: https://mtskyhazoki.pythonanywhere.com/lyrics/GetLyrics?q=save your tears&srt=true
-  apiV2_url: https://mtskyhazoki.pythonanywhere.com/lyrics/GetLyrPrecisily?t=Ountha&a=siilawy&d=3:27
+  zip_url: http://example.com/download.zip
+  another_url: http://example.com/download.zip

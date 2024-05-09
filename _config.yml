@@ -3,15 +3,12 @@ theme: jekyll-theme-hacker
 # Site Information
 title: zhlyr
 description: A library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
-locale: en
 
-# URLs and Paths
 url: https://github.com/Gaoc3
 baseurl: /zhlyr
 
 languages: [ar, en]
 
-# Fonts Configuration
 fonts:
   regular: "16px"
   large: "18px"

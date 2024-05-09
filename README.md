@@ -1,36 +1,58 @@
-# Site Information
-- **Title:** zhlyr
-- **Description:** A library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
-- **Locale:** en
+# _config.yml
 
-# Theme
-- **Theme:** jekyll-theme-hacker
+## Site Information
+- Title: "zhlyr"
+- Description: "A library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet."
+- Locale: "en"
 
-# URLs and Paths
-- **URL:** [https://github.com/](https://github.com/)
-- **Base URL:** /zhlyr
+## Theme
+- Theme: jekyll-theme-hacker
 
-# Languages
-- **Languages:** Arabic (ar), English (en)
+## URLs and Paths
+- URL: "https://github.com/"
+- Baseurl: "/zhlyr"
 
-# Fonts Configuration
-- **Regular Font Size:** 16px
-- **Large Font Size:** 18px
+## Languages
+- Languages: ["ar", "en"]
 
-# Social Media Links and Top-Left GitHub Link
-- **GitHub**: [![GitHub](https://cdn-icons-png.flaticon.com/512/25/25231.png)](https://github.com/) (Top-left, Small)
-- **Instagram**: [![Instagram](https://cdn-icons-png.flaticon.com/512/2111/2111463.png)](https://www.instagram.com/) (Top-right, Small)
-- **Telegram**: [![Telegram](https://cdn-icons-png.flaticon.com/512/2111/2111646.png)](https://web.telegram.org/) (Top-right, Small)
+## Fonts Configuration
+- Regular Font Size: "16px"
+- Large Font Size: "18px"
 
+## Social Media Links and Top-Left GitHub Link
+- GitHub:
+  - Icon: "![GitHub](https://cdn-icons-png.flaticon.com/512/25/25231.png)"
+  - Link: "[GitHub](https://github.com/)"
+  - Position: "top-left"
+  - Size: "small"
+- Instagram:
+  - Icon: "![Instagram](https://cdn-icons-png.flaticon.com/512/2111/2111463.png)"
+  - Link: "[Instagram](https://www.instagram.com/)"
+  - Position: "top-right"
+  - Size: "small"
+- Telegram:
+  - Icon: "![Telegram](https://cdn-icons-png.flaticon.com/512/2111/2111646.png)"
+  - Link: "[Telegram](https://web.telegram.org/)"
+  - Position: "top-right"
+  - Size: "small"
 
-# Custom Code Area
-- This is where you can write your code examples.
+## Custom Code Area
+- Code Area: "This is where you can write your code examples."
 
-# Website Description
-A platform aimed at music enthusiasts, providing tools for managing and discovering music, fetching song lyrics, and utilizing machine learning algorithms to predict the name of a song from a short audio snippet. Dive into a world where music meets technology, explore our features, and embark on a journey of musical discovery like never before.
+## Website Description
+- Site Description: >
+  A platform aimed at music enthusiasts, providing tools for managing and discovering music, fetching song lyrics, and utilizing machine learning algorithms to predict the name of a song from a short audio snippet. Dive into a world where music meets technology, explore our features, and embark on a journey of musical discovery like never before.
 
-# Layout Configuration
-- **Header:**
-  - GitHub (top-left, small)
-  - Instagram (top-right, small)
-  - Telegram (top-right, small)
+## Layout Configuration
+- Layout:
+  - Header:
+    - Social: "github"
+      - Size: "small"
+      - Position: "top-left"
+    - Social: "instagram"
+      - Size: "small"
+      - Position: "top-right"
+    - Social: "telegram"
+      - Size: "small"
+      - Position: "top-right"
+

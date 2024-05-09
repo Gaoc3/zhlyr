@@ -1,10 +1,3 @@
-<header>
-        <img src="https://ibb.co/x2LmP7d" alt="شعار الموقع">
-        <h1>اسم الموقع</h1>
-</header>
-
-
-
 
 ## Code Area :
 - **Install zhlyr:**

@@ -1,11 +1,6 @@
-source:
-  path: .
 theme: jekyll-theme-hacker
-
 # Site Information
 markdown: kramdown
-permalink: :slug
-source: /
 title: zhlyr
 description: library for handling music, fetching music lyrics, and predicting the name of a song from a short audio snippet.
 favicon: "favicon.png"

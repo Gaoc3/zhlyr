@@ -5,16 +5,19 @@
 
 <details> 
 <summary>
-<i>🔎🎵 Install Zhlyr</i>
+<i>🔎 Install Zhlyr</i>
 </summary>
-
+  
   ```python3
 💲pip install zhlyr
   ```
-
 ------
-- **Reconize audio to get full track info**
-
+<details>
+<summary>
+  <i>🔎🎵 Recognize track</i>
+</summary>
+Recognize a track based on a file<br>
+  
 ```python3
 # Get full track json response object info
 
@@ -23,7 +26,7 @@ data = '/root/user/dir/simple.mp3'
 reco = Reconize(data)
 print(reco.json())
 
-# You can get respnose info as string response instead json response object 
+# You can get respnose info as string response 
 reco = Reconize(data)
 print(reco.text)
 ```

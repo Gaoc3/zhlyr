@@ -6,6 +6,7 @@
 <i>🔎🎵 Install zhlyr</i>
 </summary>
 
+
 ```
 💲 pip install zhlyr
 ```

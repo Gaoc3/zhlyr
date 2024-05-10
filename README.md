@@ -52,7 +52,7 @@
   ```python3
   from zhlyr import ZhLyr
   lyrics = ZhLyr.GetByTitle(title='save your trears',srt=false)
-  # :GetByTitle: `title`: str : title of the music to get trrack from it.
+  # :GetByTitle: `title`: str : title of the track to get trrack from it.
   # :GetByTitle: `srt`: bool : if `true` he will return time as `srt` format.
   # :GetByTitle: return json object
   
@@ -66,9 +66,9 @@
   </br>
   ```python3
   lyrics = ZhLyr.GetByDetails(title='save your trears',artist='the weeknd',duration='3:35',srt=false)
-  # :GetByDetails: `title`: str : title of the music to get trrack from it.
-  # :GetByDetails: `artist`: str : artist of the music to get lyrics from it.
-  # :GetByDetails: `duration` : Optional[str]=None : duration of the music to get lyrics from it.
+  # :GetByDetails: `title`: str : title of the track to get trrack from it.
+  # :GetByDetails: `artist`: str : artist of the track to get lyrics from it.
+  # :GetByDetails: `duration` : Optional[str]=None : duration of the track to get lyrics from it.
   # :GetByDetails: `srt`: bool : if `true` he will return time as `srt` format.
   # :GetByDetails: return json object
   

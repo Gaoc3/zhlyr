@@ -110,7 +110,6 @@
 
 </details>
 
-------
 
 ## My Accounts
 - [GitHub](https://github.com/Gaoc3/) [<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">](https://github.com/)

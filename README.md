@@ -118,6 +118,3 @@
   
 ------
 
-
-<span style="color: red;">بحب طيز السيسي</span>
-

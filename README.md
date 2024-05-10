@@ -5,7 +5,8 @@
 
 <details> 
 <summary>
-<i>🔎 Install Zhlyr</i>
+<i>🔎![Uploading LoadingDownloadingGIF.gif…]()
+ Install Zhlyr</i>
 </summary>
   
 ```python3

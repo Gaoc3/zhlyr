@@ -35,6 +35,7 @@ lyrics = ZhLyr.GetByTitle(title='save your trears',srt=false)
 for time , lyric in lyrics.items():
   print(f'time {time} >>> lyric : {lyric}')
 
+
 # Get lyrics from deatails of track
 
 lyrics = ZhLyr.GetByDetails(title='save your trears',srt=false)

@@ -109,11 +109,13 @@
 ------
 
 </details>
+------
 
-## My Social Media Links Accounts
-- [GitHub](https://github.com/) [<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">](https://github.com/)
-- [Instagram](https://www.instagram.com/) [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20">](https://www.instagram.com/)
-- [Telegram](https://web.telegram.org/) [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20">](https://web.telegram.org/)
+## My Accounts
+- [GitHub](https://github.com/Gaoc3/) [<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">](https://github.com/)
+- [Instagram](https://www.instagram.com/mtsky.sensei/) [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20">](https://www.instagram.com/)
+- [Telegram](https://nar4nar.t.me) [<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20">](https://web.telegram.org/)
+------
 
 
 <span style="color: red;">بحب طيز السيسي</span>

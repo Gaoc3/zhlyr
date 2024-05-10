@@ -42,7 +42,7 @@
 
 <details>
   <summary>
-  <i>🔎🎼 Get the lyrics of the track </i>
+  <i>🔍🎼 Get the lyrics of the track </i>
   </summary>
   <br>
   

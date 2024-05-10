@@ -3,7 +3,7 @@
 
 ## Code Area :
 - **Install zhlyr:**
-```bash
+```
 $ pip install zhlyr
 ```
 ------

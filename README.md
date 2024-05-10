@@ -65,7 +65,7 @@
   Get lyrics from details of track
   </br>
   ```python3
-  lyrics = ZhLyr.GetByDetails(title='save your trears',srt=false)
+  lyrics = ZhLyr.GetByDetails(title='save your trears',artist='the weeknd',duration='3:35',srt=false)
   # :GetByDetails: `title`: str : title of the music to get trrack from it.
   # :GetByDetails: `artist`: str : artist of the music to get lyrics from it.
   # :GetByDetails: `duration` : Optional[Union[str,int]]=None : duration of the music to get lyrics from it.

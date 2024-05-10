@@ -16,7 +16,7 @@
 
 <details>
   <summary>
-  <i>🔎🎵 Recognize track</i>
+  <i>🎵 Recognize track</i>
   </summary>
   <br>Recognize a track based on a file</br>
 
@@ -42,7 +42,7 @@
 
 <details>
   <summary>
-  <i>🔎🎵 Get the lyrics of the track </i>
+  <i>🔎🎼 Get the lyrics of the track </i>
   </summary>
   <br>
   
@@ -83,7 +83,7 @@
 
 
   <summary>
-    <i>🔎🎵 How to use data serialization </i>
+    <i>ℹ️ How to use data serialization </i>
   </summary>
   <br>
   

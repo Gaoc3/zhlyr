@@ -12,51 +12,103 @@
 💲pip install zhlyr
   ```
 ------
+</details>
+
 <details>
-<summary>
+  <summary>
   <i>🔎🎵 Recognize track</i>
-</summary>
-Recognize a track based on a file<br>
-  
-```python3
-# Get full track json response object info
+  </summary>
+  <br>Recognize a track based on a file</br>
 
-from zhlyr import Reconize
-data = '/root/user/dir/simple.mp3'
-reco = Reconize(data)
-print(reco.json())
+  ```python3
+  # Get full track json response object info
 
-# You can get respnose info as string response 
-reco = Reconize(data)
-print(reco.text)
-```
+  import asynico
+  from zhlyr import Reconize
+  data = '/root/user/dir/simple.mp3'
+  async def get_info():
+    reco = await Reconize(data)
+    print(reco.json())
+  loop = asynico.new_event_loop()
+  loop.run_until_complete(get_info)
+
+  # You can get respnose info as string response 
+  reco = Reconize(data)
+  print(reco.text)
+  ```
 ------
-- **Get the lyrics of the track**
-```python3
-# Get lyrics from title of the track
 
-from zhlyr import ZhLyr
-lyrics = ZhLyr.GetByTitle(title='save your trears',srt=false)
-# :GetByTitle: `title`: str : title of the music to get trrack from it.
-# :GetByTitle: `srt`: bool : if `true` he will return time as `srt` format.
-# :GetByTitle: return json object
+</details>
 
-for time , lyric in lyrics.items():
-  print(f'time {time} >>> lyric : {lyric}')
+<details>
+  <summary>
+  <i>🔎🎵 Get the lyrics of the track </i>
+  </summary>
+  <br>
+  
+  Get lyrics from title of the track
+  </br>
+  
+  ```python3
+  from zhlyr import ZhLyr
+  lyrics = ZhLyr.GetByTitle(title='save your trears',srt=false)
+  # :GetByTitle: `title`: str : title of the music to get trrack from it.
+  # :GetByTitle: `srt`: bool : if `true` he will return time as `srt` format.
+  # :GetByTitle: return json object
+  
+  for time , lyric in lyrics.items():
+    print(f'time {time} >>> lyric : {lyric}')
+  ```
+  
+  <br>
+  
+  Get lyrics from details of track
+  </br>
+  ```python3
+  lyrics = ZhLyr.GetByDetails(title='save your trears',srt=false)
+  # :GetByDetails: `title`: str : title of the music to get trrack from it.
+  # :GetByDetails: `artist`: str : artist of the music to get lyrics from it.
+  # :GetByDetails: `duration` : Optional[Union[str,int]]=None : duration of the music to get lyrics from it.
+  # :GetByDetails: `srt`: bool : if `true` he will return time as `srt` format.
+  # :GetByDetails: return json object
+  
+  for time , lyric in lyrics.items():
+    print(f'time {time} >>> lyric : {lyric}')
+  ```
+------
+</details>
+
+<details>
+  
 
 
-# Get lyrics from deatails of track
+  <summary>
+    <i>🔎🎵 How to use data serialization </i>
+  </summary>
+  <br>
+  
+  Serialized data from response.
+  </br>
+  
+  ```python3
+  from zhlyr import Serializer
+  data = your_json_data
+  serialize = Serializer(data)
+  print(serialize)
+  ```
+  <br>
+  
+  Get vlue from key with serialized data.
+  </br>
 
-lyrics = ZhLyr.GetByDetails(title='save your trears',srt=false)
-# :GetByDetails: `title`: str : title of the music to get trrack from it.
-# :GetByDetails: `artist`: str : artist of the music to get lyrics from it.
-# :GetByDetails: `duration` : Optional[Union[str,int]]=None : duration of the music to get lyrics from it.
-# :GetByDetails: `srt`: bool : if `true` he will return time as `srt` format.
-# :GetByDetails: return json object
+  ```python3
+  data = {'key1':'hello world!'}
+  serialize = Serializer(data)
+  print(serialize.key1)
+  ```
+------
 
-for time , lyric in lyrics.items():
-  print(f'time {time} >>> lyric : {lyric}')
-```
+</details>
 
 ## My Social Media Links Accounts
 - [GitHub](https://github.com/) [<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">](https://github.com/)

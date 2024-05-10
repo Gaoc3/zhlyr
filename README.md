@@ -5,10 +5,8 @@
 
 <details> 
 <summary>
-<i>🔎🎵 Recognize track</i>
+<i>🔎🎵 Install Zhlyr</i>
 </summary>
-
-Recognize a track based on a file<br>
 
   ```python3
 💲pip install zhlyr

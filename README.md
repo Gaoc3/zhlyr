@@ -3,15 +3,16 @@
 
 ## Code Area :
 
-</details>
+<details> 
 <summary>
-<i>🔎🎵 Install zhlyr</i>
+<i>🔎🎵 Recognize track</i>
 </summary>
 
-```
-💲 pip install zhlyr
-```
-</details>
+Recognize a track based on a file<br>
+
+  ```python3
+💲pip install zhlyr
+  ```
 
 ------
 - **Reconize audio to get full track info**

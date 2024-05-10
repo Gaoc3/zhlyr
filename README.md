@@ -4,7 +4,7 @@
 ## Code Area :
 - **Install zhlyr:**
 ```
-$ pip install zhlyr
+💲 pip install zhlyr
 ```
 ------
 - **Reconize audio to get full track info**

@@ -8,9 +8,9 @@
 <i>🔎 Install Zhlyr</i>
 </summary>
   
-  ```python3
+```python3
 💲pip install zhlyr
-  ```
+```
 ------
 </details>
 

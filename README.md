@@ -68,7 +68,7 @@
   lyrics = ZhLyr.GetByDetails(title='save your trears',artist='the weeknd',duration='3:35',srt=false)
   # :GetByDetails: `title`: str : title of the music to get trrack from it.
   # :GetByDetails: `artist`: str : artist of the music to get lyrics from it.
-  # :GetByDetails: `duration` : Optional[Union[str,int]]=None : duration of the music to get lyrics from it.
+  # :GetByDetails: `duration` : Optional[str]=None : duration of the music to get lyrics from it.
   # :GetByDetails: `srt`: bool : if `true` he will return time as `srt` format.
   # :GetByDetails: return json object
   

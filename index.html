@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-darkreader-mode="dynamic" data-darkreader-scheme="dynamic">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +33,23 @@
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: 18px;
+    position: relative;
+  }
+
+  summary::after {
+    content: '▼';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  details[open] summary::after {
+    transform: rotate(-180deg) translateY(-50%);
   }
   
   details p {
@@ -40,11 +57,31 @@
   }
   
   details pre {
-    background-color: #f1f1f1;
-    color: #333;
-    padding: 10px;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    padding: 20px;
     border-radius: 5px;
     overflow-x: auto;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  details pre::after {
+    content: 'Copy';
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 3px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  details pre::after:hover {
+    background-color: #0056b3;
   }
   
   .accounts {
@@ -61,12 +98,19 @@
   .accounts li img {
     vertical-align: middle;
     margin-right: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .accounts li img:hover {
+    transform: scale(1.1);
   }
   
   /* وضع النمط الداكن */
   body.dark-mode {
     background-color: #1e1e1e;
     color: #dcdcdc;
+    --text-color: #dcdcdc;
   }
   
   body.dark-mode .container {
@@ -84,14 +128,19 @@
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     z-index: 999;
+    transition: background-color 0.3s ease;
   }
   
+  .dark-mode-button:hover {
+    background-color: #0056b3;
+  }
+
   /* تحديد ألوان الثيم */
   :root {
     --dark-theme-color: #1e1e1e;
@@ -100,6 +149,8 @@
     --night-owl-theme-button-text: 'Night Owl Theme';
     --night-wolf-owl-theme-color: #011627; /* خلفية ذئب بلون owl ساحرة */
     --night-wolf-owl-theme-button-text: 'Night Wolf Owl Theme';
+    --text-color-light: #333;
+    --text-color-dark: #dcdcdc;
   }
 
   /* تحسين مظهر الشفرة في الوضع الداكن */
@@ -108,6 +159,17 @@
     font-size: 14px;
     line-height: 1.5;
     color: #dcdcdc;
+    font-weight: normal; /* تغيير الوزن إلى عادي */
+  }
+
+  /* تغيير لون الرابط في وضع الداكن */
+  body.dark-mode .container a {
+    color: #4e94e1; /* لون الرابط في الوضع الليلي */
+  }
+
+  /* تغيير ألوان الروابط عند التحويل بين الوضعين */
+  body.dark-mode .container a {
+    transition: color 0.3s ease;
   }
 </style>
 <script>
@@ -118,13 +180,6 @@
     const button = document.querySelector('.dark-mode-button');
     const isDarkMode = body.classList.contains('dark-mode');
     button.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-
-    // تحديد الشفرة المظلمة بواسطة Prism.js عند التبديل إلى الوضع الداكن
-    if (isDarkMode) {
-      Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/';
-      Prism.plugins.autoloader.use_minified = true;
-      Prism.plugins.autoloader.loadLanguages('python');
-    }
   }
 </script>
 </head>
@@ -138,14 +193,13 @@
   
   <details> 
     <summary>⏬ Install Zhlyr</summary>
-    <pre><code>pip install zhlyr</code></pre>
+    <pre><code class="language-python">pip install zhlyr</code></pre>
   </details>
   
   <details>
     <summary>🎵 Recognize track</summary>
     <p>Recognize a track based on a file</p>
-    <pre class="language-python"><code># Get full track json response object info
-import asyncio
+    <pre><code class="language-python">import asyncio
 from zhlyr import Recognize
 
 data = '/root/user/dir/simple.mp3'
@@ -165,14 +219,14 @@ print(reco.text)</code></pre>
   <details>
     <summary>🔍🎼 Get the lyrics of the track</summary>
     <p>Get lyrics from title of the track</p>
-    <pre><code>from zhlyr import ZhLyr
+    <pre><code class="language-python">from zhlyr import ZhLyr
 
 lyrics = ZhLyr.GetByTitle(title='save your tears', srt=False)
 
 for time, lyric in lyrics.items():
     print(f'time {time} >>> lyric : {lyric}')</code></pre>
     <p>Get lyrics from details of track</p>
-    <pre><code>lyrics = ZhLyr.GetByDetails(title='save your tears', artist='the weeknd', duration='3:35', srt=False)
+    <pre><code class="language-python">lyrics = ZhLyr.GetByDetails(title='save your tears', artist='the weeknd', duration='3:35', srt=False)
 
 for time, lyric in lyrics.items():
     print(f'time {time} >>> lyric : {lyric}')</code></pre>
@@ -181,22 +235,22 @@ for time, lyric in lyrics.items():
   <details>
     <summary>ℹ️ How to use data serialization</summary>
     <p>Serialized data from response</p>
-    <pre><code>from zhlyr import Serializer
+    <pre><code class="language-python">from zhlyr import Serializer
 
 data = your_json_data
 serialize = Serializer(data)
 print(serialize)</code></pre>
     <p>Get value from key with serialized data</p>
-    <pre><code>data = {'key1': 'hello world!'}
+    <pre><code class="language-python">data = {'key1': 'hello world!'}
 serialize = Serializer(data)
 print(serialize.key1)</code></pre>
   </details>
   
   <h2>My Accounts</h2>
   <ul class="accounts">
-    <li><a href="https://github.com/Gaoc3/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20"> GitHub</a></li>
-    <li><a href="https://www.instagram.com/mtsky.sensei/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20"> Instagram</a></li>
-    <li><a href="https://nar4nar.t.me"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20"> Telegram</a></li>
+    <li><a class="social-link" href="https://github.com/Gaoc3/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40"></a></li>
+    <li><a class="social-link" href="https://www.instagram.com/mtsky.sensei/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40" height="40"></a></li>
+    <li><a class="social-link" href="https://nar4nar.t.me"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="40" height="40"></a></li>
   </ul>
 </div>
 

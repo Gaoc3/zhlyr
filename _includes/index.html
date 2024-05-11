@@ -1,10 +1,210 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-darkreader-mode="dynamic" data-darkreader-scheme="dynamic">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhlyr</title>
-    <link rel="icon" href="favicon.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhlyr Documentation</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  details {
+    margin-bottom: 20px;
+  }
+  
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  details p {
+    margin-top: 0;
+  }
+  
+  details pre {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  
+  .accounts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .accounts li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .accounts li img {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  /* وضع النمط الداكن */
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+  }
+  
+  body.dark-mode .container {
+    background-color: #292929;
+  }
+  
+  body.dark-mode details pre {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+  }
+  
+  /* زر الوضع الداكن */
+  .dark-mode-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  /* تحديد ألوان الثيم */
+  :root {
+    --dark-theme-color: #1e1e1e;
+    --dark-theme-button-text: 'Dark Mode';
+    --night-owl-theme-color: #011627;
+    --night-owl-theme-button-text: 'Night Owl Theme';
+    --night-wolf-owl-theme-color: #011627; /* خلفية ذئب بلون owl ساحرة */
+    --night-wolf-owl-theme-button-text: 'Night Wolf Owl Theme';
+  }
+
+  /* تحسين مظهر الشفرة في الوضع الداكن */
+  body.dark-mode .container pre code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #dcdcdc;
+  }
+</style>
+<script>
+  // التبديل بين وضع النمط العادي والوضع الداكن
+  function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    const button = document.querySelector('.dark-mode-button');
+    const isDarkMode = body.classList.contains('dark-mode');
+    button.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+
+    // تحديد الشفرة المظلمة بواسطة Prism.js عند التبديل إلى الوضع الداكن
+    if (isDarkMode) {
+      Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/';
+      Prism.plugins.autoloader.use_minified = true;
+      Prism.plugins.autoloader.loadLanguages('python');
+    }
+  }
+</script>
 </head>
+<body>
+
+<div class="container">
+  <h1>Zhlyr Documentation</h1>
+  
+  <h2>What is zhlyr?</h2>
+  <p>A python library aimed at music enthusiasts, providing tools for managing and discovering music, fetching song lyrics, and utilizing machine learning algorithms to predict the name of a song from a short audio snippet.</p>
+  
+  <details> 
+    <summary>⏬ Install Zhlyr</summary>
+    <pre><code>pip install zhlyr</code></pre>
+  </details>
+  
+  <details>
+    <summary>🎵 Recognize track</summary>
+    <p>Recognize a track based on a file</p>
+    <pre class="language-python"><code># Get full track json response object info
+import asyncio
+from zhlyr import Recognize
+
+data = '/root/user/dir/simple.mp3'
+
+async def get_info():
+    reco = await Recognize(data)
+    print(reco.json())
+
+loop = asyncio.new_event_loop()
+loop.run_until_complete(get_info)
+
+# You can get response info as string response
+reco = Recognize(data)
+print(reco.text)</code></pre>
+  </details>
+  
+  <details>
+    <summary>🔍🎼 Get the lyrics of the track</summary>
+    <p>Get lyrics from title of the track</p>
+    <pre><code>from zhlyr import ZhLyr
+
+lyrics = ZhLyr.GetByTitle(title='save your tears', srt=False)
+
+for time, lyric in lyrics.items():
+    print(f'time {time} >>> lyric : {lyric}')</code></pre>
+    <p>Get lyrics from details of track</p>
+    <pre><code>lyrics = ZhLyr.GetByDetails(title='save your tears', artist='the weeknd', duration='3:35', srt=False)
+
+for time, lyric in lyrics.items():
+    print(f'time {time} >>> lyric : {lyric}')</code></pre>
+  </details>
+  
+  <details>
+    <summary>ℹ️ How to use data serialization</summary>
+    <p>Serialized data from response</p>
+    <pre><code>from zhlyr import Serializer
+
+data = your_json_data
+serialize = Serializer(data)
+print(serialize)</code></pre>
+    <p>Get value from key with serialized data</p>
+    <pre><code>data = {'key1': 'hello world!'}
+serialize = Serializer(data)
+print(serialize.key1)</code></pre>
+  </details>
+  
+  <h2>My Accounts</h2>
+  <ul class="accounts">
+    <li><a href="https://github.com/Gaoc3/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20"> GitHub</a></li>
+    <li><a href="https://www.instagram.com/mtsky.sensei/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20"> Instagram</a></li>
+    <li><a href="https://nar4nar.t.me"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20"> Telegram</a></li>
+  </ul>
+</div>
+
+<!-- زر لتبديل وضع النمط -->
+<button class="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
+
+<!-- تضمين مكتبة Prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+</body>
 </html>

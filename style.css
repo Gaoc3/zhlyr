@@ -1,3 +1,7 @@
+head link[rel="icon"] {
+    border-radius: 50%; /* تطبيق الشكل الدائري */
+    overflow: hidden; /* للتأكد من عدم ظهور جزء من الصورة خارج الدائرة */
+   }
 body {
     animation: slideIn 0.5s ease-out, fadeIn 0.5s ease-out;
     font-family: Arial, sans-serif;

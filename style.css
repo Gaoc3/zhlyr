@@ -1,5 +1,5 @@
 #icon-link {
-    border-radius: 50%; /* تطبيق الشكل الدائري */
+    border-radius: 50px; /* تطبيق الشكل الدائري */
     overflow: hidden; /* للتأكد من عدم ظهور جزء من الصورة خارج الدائرة */
    }
 body {

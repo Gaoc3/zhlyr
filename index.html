@@ -4,53 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zhlyr Documentation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0e101c;
-      color: #fff;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    .code-block {
-      position: relative;
-      background-color: #1f2335;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-    .copy-btn {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-    pre {
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/atom-one-dark.min.css">
+
 </head>
 <body>
   <div class="container">
-    <h1>Zhlyr Documentation</h1>
+    <h1>&lt;&#47;&gt; Zhlyr Documentation</h1>
 
     <div class="section">
       <h2>Install Zhlyr</h2>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <pre><code>pip install zhlyr</code></pre>
+        <pre><code id="install-code" class="python">~💲pip install zhlyr</code></pre>
       </div>
     </div>
 
@@ -58,7 +24,7 @@
       <h2>Recognize track</h2>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <pre><code># Get full track json response object info
+        <pre><code id="recognize-code" class="python"># Get full track json response object info
 
 import asyncio
 from zhlyr import Reconize
@@ -74,22 +40,21 @@ reco = Reconize(data)
 print(reco.text)</code></pre>
       </div>
     </div>
-
     <div class="section">
       <h2>Get the lyrics of the track</h2>
-      <h3>Get lyrics from title of the track</h3>
+      <h3 class="to-small">Get lyrics from title of the track</h3>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <pre><code>from zhlyr import ZhLyr
+        <pre><code id="lyrics-title-code" class="python">from zhlyr import ZhLyr
 lyrics = ZhLyr.GetByTitle(title='save your tears', srt=False)
 
 for time, lyric in lyrics.items():
   print(f'time {time} >>> lyric: {lyric}')</code></pre>
       </div>
-      <h3>Get lyrics from details of track</h3>
+      <h3 class="to-small">Get lyrics from details of track </h3>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <pre><code>lyrics = ZhLyr.GetByDetails(title='save your tears', artist='the weeknd', duration='3:35', srt=False)
+        <pre><code id="lyrics-details-code" class="python">lyrics = ZhLyr.GetByDetails(title='save your tears', artist='the weeknd', duration='3:35', srt=False)
 
 for time, lyric in lyrics.items():
   print(f'time {time} >>> lyric: {lyric}')</code></pre>
@@ -98,26 +63,49 @@ for time, lyric in lyrics.items():
 
     <div class="section">
       <h2>How to use data serialization</h2>
-      <h3>Serialized data from response</h3>
+      <h3 class="to-small">Serialized data from response</h3>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <pre><code>from zhlyr import Serializer
+        <pre><code id="serialization-code" class="python">from zhlyr import Serializer
 data = your_json_data
 serialize = Serializer(data)
 print(serialize)</code></pre>
       </div>
-      <h3>Get value from key with serialized data</h3>
+      <h3 class="to-small">Get value from key with serialized data</h3>
       <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <pre><code>data = {'key1': 'hello world!'}
+        <pre><code id="value-key-code" class="python">data = {'key1': 'hello world!'}
 serialize = Serializer(data)
 print(serialize.key1)</code></pre>
       </div>
     </div>
-
+    <h2>My Accounts</h2>
+    <ul class="accounts-list">
+      <li class="account-item">
+        <a rel="noopener" href="https://github.com/Gaoc3/" class="account-link" target="_blank">
+          <img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/96/FFFFFF/external-github-with-cat-logo-an-online-community-for-software-development-logo-bold-tal-revivo.png" alt="GitHub" class="account-icon">
+           GitHub
+        </a>
+      </li>
+      <li class="account-item">
+        <a rel="noopener" href="https://www.instagram.com/mtsky.sensei/" class="account-link" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="account-icon">
+          Instagram
+        </a>
+      </li>
+      <li class="account-item">
+        <a rel="noopener" href="https://nar4nar.t.me" class="account-link" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="account-icon">
+          Telegram
+        </a>
+      </li>
+    </ul>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
   <script>
+    hljs.highlightAll();
+
     function copyCode(btn) {
       var codeBlock = btn.nextElementSibling.querySelector("code");
       var tempTextarea = document.createElement("textarea");

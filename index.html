@@ -1,264 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zhlyr Documentation</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.css">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f5f5f5;
-    transition: background-color 0.3s ease;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-  
-  details {
-    margin-bottom: 20px;
-  }
-  
-  summary {
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--text-color);
-    font-size: 18px;
-    position: relative;
-  }
-
-  summary::after {
-    content: '▼';
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  details[open] summary::after {
-    transform: rotate(-180deg) translateY(-50%);
-  }
-  
-  details p {
-    margin-top: 0;
-  }
-  
-  details pre {
-    background-color: #1e1e1e;
-    color: #dcdcdc;
-    padding: 20px;
-    border-radius: 5px;
-    overflow-x: auto;
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  }
-
-  details pre::after {
-    content: 'Copy';
-    display: block;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    color: #fff;
-    background-color: #007bff;
-    padding: 3px 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  details pre::after:hover {
-    background-color: #0056b3;
-  }
-  
-  .accounts {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .accounts li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .accounts li img {
-    vertical-align: middle;
-    margin-right: 5px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-  }
-  
-  .accounts li img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* وضع النمط الداكن */
-  body.dark-mode {
-    background-color: #1e1e1e;
-    color: #dcdcdc;
-    --text-color: #dcdcdc;
-  }
-  
-  body.dark-mode .container {
-    background-color: #292929;
-  }
-  
-  body.dark-mode details pre {
-    background-color: #1e1e1e;
-    color: #dcdcdc;
-  }
-  
-  /* زر الوضع الداكن */
-  .dark-mode-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 999;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dark-mode-button:hover {
-    background-color: #0056b3;
-  }
-
-  /* تحديد ألوان الثيم */
-  :root {
-    --dark-theme-color: #1e1e1e;
-    --dark-theme-button-text: 'Dark Mode';
-    --night-owl-theme-color: #011627;
-    --night-owl-theme-button-text: 'Night Owl Theme';
-    --night-wolf-owl-theme-color: #011627; /* خلفية ذئب بلون owl ساحرة */
-    --night-wolf-owl-theme-button-text: 'Night Wolf Owl Theme';
-    --text-color-light: #333;
-    --text-color-dark: #dcdcdc;
-  }
-
-  /* تحسين مظهر الشفرة في الوضع الداكن */
-  body.dark-mode .container pre code {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #dcdcdc;
-    font-weight: normal; /* تغيير الوزن إلى عادي */
-  }
-
-  /* تغيير لون الرابط في وضع الداكن */
-  body.dark-mode .container a {
-    color: #4e94e1; /* لون الرابط في الوضع الليلي */
-  }
-
-  /* تغيير ألوان الروابط عند التحويل بين الوضعين */
-  body.dark-mode .container a {
-    transition: color 0.3s ease;
-  }
-</style>
-<script>
-  // التبديل بين وضع النمط العادي والوضع الداكن
-  function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-    const button = document.querySelector('.dark-mode-button');
-    const isDarkMode = body.classList.contains('dark-mode');
-    button.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-  }
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhlyr Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e101c;
+      color: #fff;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .code-block {
+      position: relative;
+      background-color: #1f2335;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Zhlyr Documentation</h1>
 
-<div class="container">
-  <h1>Zhlyr Documentation</h1>
-  
-  <h2>What is zhlyr?</h2>
-  <p>A python library aimed at music enthusiasts, providing tools for managing and discovering music, fetching song lyrics, and utilizing machine learning algorithms to predict the name of a song from a short audio snippet.</p>
-  
-  <details> 
-    <summary>⏬ Install Zhlyr</summary>
-    <pre><code class="language-python">pip install zhlyr</code></pre>
-  </details>
-  
-  <details>
-    <summary>🎵 Recognize track</summary>
-    <p>Recognize a track based on a file</p>
-    <pre><code class="language-python">import asyncio
-from zhlyr import Recognize
+    <div class="section">
+      <h2>Install Zhlyr</h2>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        <pre><code>pip install zhlyr</code></pre>
+      </div>
+    </div>
 
+    <div class="section">
+      <h2>Recognize track</h2>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        <pre><code># Get full track json response object info
+
+import asyncio
+from zhlyr import Reconize
 data = '/root/user/dir/simple.mp3'
-
 async def get_info():
-    reco = await Recognize(data)
-    print(reco.json())
-
+  reco = await Reconize(data)
+  print(reco.json())
 loop = asyncio.new_event_loop()
 loop.run_until_complete(get_info)
 
-# You can get response info as string response
-reco = Recognize(data)
+# You can get response info as string response 
+reco = Reconize(data)
 print(reco.text)</code></pre>
-  </details>
-  
-  <details>
-    <summary>🔍🎼 Get the lyrics of the track</summary>
-    <p>Get lyrics from title of the track</p>
-    <pre><code class="language-python">from zhlyr import ZhLyr
+      </div>
+    </div>
 
+    <div class="section">
+      <h2>Get the lyrics of the track</h2>
+      <h3>Get lyrics from title of the track</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        <pre><code>from zhlyr import ZhLyr
 lyrics = ZhLyr.GetByTitle(title='save your tears', srt=False)
 
 for time, lyric in lyrics.items():
-    print(f'time {time} >>> lyric : {lyric}')</code></pre>
-    <p>Get lyrics from details of track</p>
-    <pre><code class="language-python">lyrics = ZhLyr.GetByDetails(title='save your tears', artist='the weeknd', duration='3:35', srt=False)
+  print(f'time {time} >>> lyric: {lyric}')</code></pre>
+      </div>
+      <h3>Get lyrics from details of track</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        <pre><code>lyrics = ZhLyr.GetByDetails(title='save your tears', artist='the weeknd', duration='3:35', srt=False)
 
 for time, lyric in lyrics.items():
-    print(f'time {time} >>> lyric : {lyric}')</code></pre>
-  </details>
-  
-  <details>
-    <summary>ℹ️ How to use data serialization</summary>
-    <p>Serialized data from response</p>
-    <pre><code class="language-python">from zhlyr import Serializer
+  print(f'time {time} >>> lyric: {lyric}')</code></pre>
+      </div>
+    </div>
 
+    <div class="section">
+      <h2>How to use data serialization</h2>
+      <h3>Serialized data from response</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        <pre><code>from zhlyr import Serializer
 data = your_json_data
 serialize = Serializer(data)
 print(serialize)</code></pre>
-    <p>Get value from key with serialized data</p>
-    <pre><code class="language-python">data = {'key1': 'hello world!'}
+      </div>
+      <h3>Get value from key with serialized data</h3>
+      <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        <pre><code>data = {'key1': 'hello world!'}
 serialize = Serializer(data)
 print(serialize.key1)</code></pre>
-  </details>
-  
-  <h2>My Accounts</h2>
-  <ul class="accounts">
-    <li><a class="social-link" href="https://github.com/Gaoc3/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40"></a></li>
-    <li><a class="social-link" href="https://www.instagram.com/mtsky.sensei/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40" height="40"></a></li>
-    <li><a class="social-link" href="https://nar4nar.t.me"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="40" height="40"></a></li>
-  </ul>
-</div>
+      </div>
+    </div>
 
-<!-- زر لتبديل وضع النمط -->
-<button class="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
 
-<!-- تضمين مكتبة Prism.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+  <script>
+    function copyCode(btn) {
+      var codeBlock = btn.nextElementSibling.querySelector("code");
+      var tempTextarea = document.createElement("textarea");
+      tempTextarea.value = codeBlock.textContent;
+      document.body.appendChild(tempTextarea);
+      tempTextarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempTextarea);
+      btn.textContent = "Copied!";
+      setTimeout(function() {
+        btn.textContent = "Copy";
+      }, 2000);
+    }
+  </script>
 </body>
 </html>

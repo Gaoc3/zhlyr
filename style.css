@@ -1,0 +1,113 @@
+body {
+    animation: slideIn 0.5s ease-out, fadeIn 0.5s ease-out;
+    font-family: Arial, sans-serif;
+    background-color: #0e101c;
+    color: #fff;
+    padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section {
+    margin-bottom: 30px;
+  }
+  .code-block {
+    position: relative;
+    margin-bottom: 20.5px;
+    border-radius: 15.5px;
+    overflow: hidden; 
+}
+
+
+  .copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: auto;
+    cursor: pointer;
+  }
+  .to-small {
+    font-size: 14px;
+    font-weight: initial;
+  }
+  .to-small::after{
+    content: " :";
+    font-weight: bold;
+  }
+  pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: auto ; 
+  font-weight: bold;
+  }
+    pre code {
+    font-size: 16px;
+    margin: auto;
+    font-weight: lighter;
+    }
+    #install-code {
+    color: rgb(81, 255, 12);
+    font-family:monospace;
+    }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+  ::-webkit-scrollbar-track {
+    background: #333;
+  }
+  .accounts-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex; /* عرض الروابط بشكل أفقي */
+    overflow-x: auto; /* إضافة شريط تمرير أفقي في حالة تجاوز العناصر الحاوية */
+    animation: slideIn 1s ease-out; /* تطبيق تأثير حركي للعناصر */
+  }
+  .account-item {
+    margin-right: 20px; /* تباعد بين الروابط */
+  }
+  .account-link {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    animation: slideIn 1s ease-out; /* تطبيق تأثير حركي للروابط */
+  }
+  .account-icon {
+    margin-right: 5px;
+    animation: fadeIn 1s ease-out; /* تطبيق تأثير حركي للأيقونات */
+    width: 30px; /* زيادة حجم الأيقونات */
+  }
+  /* تأثير حركي للعناصر عند الظهور */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

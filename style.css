@@ -1,6 +1,6 @@
 body {
     animation: slideIn 0.5s ease-out, fadeIn 0.5s ease-out;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #0e101c;
     color: #fff;
     padding: 20px;
@@ -18,20 +18,45 @@ body {
     border-radius: 15.5px;
     overflow: hidden; 
 }
+.copy-btn {
+  font: bold;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #02083f; /* لون الخلفية */
+  color: #ffffff; /* لون النص */
+  border: transparent;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: auto;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* تأثير الانتقال */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.918); /* ظل خفيف */
+  outline: none; /* عدم ظهور الحدود البيضاء */
+  animation: pulse 2s infinite; /* تأثير النبض */
+}
 
+.copy-btn:hover {
+  font: bold;
+  background-color: #003ce0; /* لون الخلفية عند التحويل */
+  color: #ffffff; /* لون النص عند التحويل */
+  box-shadow: 0 0 10px rgba(1, 24, 73, 0.8); /* تغيير ظل عند التحويل */
+  animation: none; /* تعطيل تأثير النبض عند التحويل */
+  transform: scale(1.1); /* انتفاخ الزر عند التحويل */
+}
 
-  .copy-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin-top: auto;
-    cursor: pointer;
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* حجم النبض في بداية الرسم البياني */
   }
+  50% {
+    transform: scale(1.1); /* حجم النبض في منتصف الرسم البياني */
+  }
+  100% {
+    transform: scale(1); /* حجم النبض في نهاية الرسم البياني */
+  }
+}
+
   .to-small {
     font-size: 14px;
     font-weight: initial;
@@ -109,5 +134,40 @@ body {
     }
     to {
       opacity: 1;
+    }
+  }
+
+  .separator {
+    width: 100%;
+    height: 4px; /* زيادة سمك الخط */
+    background-color: transparent; /* خلفية شفافة */
+    margin: 40px 0; /* تعديل المسافة بين الفواصل */
+    position: relative; /* وضع نسبي */
+  }
+
+  .separator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000); /* تأثير الإشعاع بتدرج الألوان */
+    background-size: 200% 100%; /* حجم خلفية الإشعاع */
+    animation: pulsate 3.5s infinite; /* تأثير النبض */
+    border-radius: 4px; /* إضافة تدرج الزوايا */
+    -webkit-filter: saturate(200%); /* زيادة تشبع الألوان */
+    filter: saturate(200%);
+  }
+
+  @keyframes pulsate {
+    0% {
+      background-position: 0% 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0% 0;
     }
   }

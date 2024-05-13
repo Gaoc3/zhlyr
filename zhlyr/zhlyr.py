@@ -30,7 +30,7 @@ class ZhLyr(Request):
             )
             prepped = cls.send_request.prepare_request(prepared_request)
             r = cls.send_request.send(prepped)
-            return r.json()
+            return r.json()['lyrics']
 
     @classmethod
     def GetByDetails(cls, title:str,artist:str,duration:Optional[Union[str,int]]=None,srt=None) -> dict:
@@ -53,5 +53,5 @@ class ZhLyr(Request):
         )
         prepped = cls.send_request.prepare_request(prepared_request)
         r = cls.send_request.send(prepped)
-        return r.json()
+        return r.json()['lyrics']
     

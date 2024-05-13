@@ -1,7 +1,8 @@
 from typing import Union, Optional
 from shazamio import Shazam as RecoSnizer
-import json
+import json , os , asyncio
 from pathlib import Path
+from serilize import Serializer
 RecoSnizer_ = RecoSnizer()
 class RecoSnize(RecoSnizer):
     '''
@@ -13,9 +14,14 @@ class RecoSnize(RecoSnizer):
         super().__init__(*args, **kwargs)
         self.data = data
         self.proxy = proxy
-        with open(self.data, 'rb') as f:
-            self.data_bytes = f.read()
-        self.recognizer = self.recognize(self.data_bytes, self.proxy)
+        if isinstance(self.data,Path) or isinstance(self.data,str):
+            with open(self.data, 'rb') as f:
+                self.data_bytes = f.read()
+            self.recognizer = self.recognize(self.data_bytes, self.proxy)
+        elif isinstance(self.data,bytes) or isinstance(self.data,bytearray):
+            self.recognizer = self.recognize(self.data, self.proxy)
+        else:
+            raise TypeError('Use str , bytes , btyearry , or Path jsut.')
 
     async def json(self, **kwargs) -> dict:
         '''
@@ -33,6 +39,8 @@ class RecoSnize(RecoSnizer):
         return str(await self.recognizer)
 
 
+
+# Example to use to RecoSnizer :
 
 # async def main():
 #     data_path = r'C:\Users\Mtsky\Downloads\Telegram Desktop\mzaf_17549133339911745381.plus.aac.ep (2).m4a'

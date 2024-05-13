@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zhlyr Documentation</title>
-  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/atom-one-dark.min.css">
 </head>
-  
 <body>
   <div class="container">
     <h1>&lt;&#47;&gt; Zhlyr Documentation</h1>
@@ -20,6 +18,8 @@
         <pre><code id="install-code" class="python">~💲pip install zhlyr</code></pre>
       </div>
     </div>
+
+    <div class="separator"></div> <!-- فاصل خطي -->
 
     <div class="section">
       <h2>Recognize track</h2>
@@ -41,6 +41,9 @@ reco = Reconize(data)
 print(reco.text)</code></pre>
       </div>
     </div>
+
+    <div class="separator"></div> <!-- فاصل خطي -->
+
     <div class="section">
       <h2>Get the lyrics of the track</h2>
       <h3 class="to-small">Get lyrics from title of the track</h3>
@@ -62,6 +65,8 @@ for time, lyric in lyrics.items():
       </div>
     </div>
 
+    <div class="separator"></div> <!-- فاصل خطي -->
+
     <div class="section">
       <h2>How to use data serialization</h2>
       <h3 class="to-small">Serialized data from response</h3>
@@ -80,6 +85,9 @@ serialize = Serializer(data)
 print(serialize.key1)</code></pre>
       </div>
     </div>
+
+    <div class="separator"></div> <!-- فاصل خطي -->
+
     <h2>My Accounts</h2>
     <ul class="accounts-list">
       <li class="account-item">
@@ -120,7 +128,8 @@ print(serialize.key1)</code></pre>
         btn.textContent = "Copy";
       }, 2000);
     }
+
+
   </script>
 </body>
-  
 </html>

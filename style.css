@@ -31,7 +31,7 @@ body {
   margin-top: auto;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* تأثير الانتقال */
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.918); /* ظل خفيف */
+  box-shadow: 0 0 5px rgb(248, 248, 248), 0 0 10px rgba(255, 255, 255, 0.5); /* ظل خفيف */
   outline: none; /* عدم ظهور الحدود البيضاء */
   animation: pulse 2s infinite; /* تأثير النبض */
 }
@@ -40,7 +40,7 @@ body {
   font: bold;
   background-color: #003ce0; /* لون الخلفية عند التحويل */
   color: #ffffff; /* لون النص عند التحويل */
-  box-shadow: 0 0 10px rgba(1, 24, 73, 0.8); /* تغيير ظل عند التحويل */
+  box-shadow: 0 0 10px rgba(2, 30, 88, 0.8); /* تغيير ظل عند التحويل */
   animation: none; /* تعطيل تأثير النبض عند التحويل */
   transform: scale(1.1); /* انتفاخ الزر عند التحويل */
 }

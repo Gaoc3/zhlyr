@@ -9,7 +9,7 @@
   </summary>
     
   ```python3
-  💲pip install zhlyr
+  ~💲pip install zhlyr
   ```
   ------
   </details>

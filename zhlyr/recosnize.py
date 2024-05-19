@@ -2,7 +2,6 @@ from typing import Union, Optional
 from shazamio import Shazam as RecoSnizer
 import json , os , asyncio
 from pathlib import Path
-from serilize import Serializer
 RecoSnizer_ = RecoSnizer()
 class RecoSnize(RecoSnizer):
     '''
@@ -40,12 +39,3 @@ class RecoSnize(RecoSnizer):
 
 
 
-# Example to use to RecoSnizer :
-
-# async def main():
-#     data_path = r'C:\Users\Mtsky\Downloads\Telegram Desktop\mzaf_17549133339911745381.plus.aac.ep (2).m4a'
-#     result = await RecoSnize(data_path).json()
-#     print(Serializer(result).track.title)
-
-# loop = asyncio.new_event_loop()
-# loop.run_until_complete(main())

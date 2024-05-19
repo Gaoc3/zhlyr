@@ -14,7 +14,7 @@ pyx_files = [os.path.join(root, file) for root, dirs, files in os.walk(base_dir)
 
 setup(
     name='zhlyr',
-    version='4.9',
+    version='5.0',
     packages=find_packages(),
     install_requires=['requests', 'shazamio', 'shazam', 'cython'],
     ext_modules=cythonize(pyx_files),
